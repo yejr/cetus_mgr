@@ -31,7 +31,7 @@ make install
 
 ### 5. How to modify proxy.conf
 1. Modify proxy-backend-addresses to be the primary address of MySQL Group Replication
-2. Modify proxy-read-only-backend-addresses to be the secondary addresses of MySQL Group Replication
+2. Modify proxy-read-only-backend-addresses to be the secondary addresses of MySQL Group Replication(no need to add primary node)
 3. Modify default-username to be the valid user name that could have the privileges of both manipulating MySQL Group Replication and MySQL.
 4. Modify log-file to be the valid file path.
 5. Modify worker-processes to be appropriate number that best suits the workload.

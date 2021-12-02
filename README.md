@@ -27,6 +27,7 @@ make install
 3. Modify proxy.conf 
 4. cp users.json.example users.json
 5. Modify users.json
+6. Start Cetus `cd /home/user/cetus_mgr_install; ./bin/cetus --defaults-file=conf/proxy.conf --user=root --default-username=cetus_app`
 
 ### 5. How to modify proxy.conf
 1. Modify proxy-backend-addresses to be the primary address of MySQL Group Replication
@@ -50,7 +51,7 @@ Modify password appropriately for both your applications and MySQL.
 4. Cetus only supports mysql_native_password.
 5. As for MySQL Group Replication, please use the modified version which could be downloaded at https://github.com/session-replay-tools/MySQL.
 6. RESET MASTER before runing MySQL Group Replication
-7. Configure MySQL Group Replication before running cetus.
+7. Make sure all of the MySQL Group Replication members is online before running cetus.
 8. The total num of connections to each MySQL is equal to default-pool-size plus worker-processes.
 
 ## Bugs and feature requests:
